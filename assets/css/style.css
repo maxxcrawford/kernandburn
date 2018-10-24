@@ -29,15 +29,16 @@ main, footer, header {
 }
 
 .bg{
-  position:absolute;
+  position: fixed;
   top:0;
   left:0;
   width:100vw;
   height:100vh;
-  background-image:url(http://78.media.tumblr.com/9951ca2e7e884a48ca5b5269f5514cd6/tumblr_nwjrkxWOcd1tslewgo1_500.gif);
+  /* background-image:url(http://78.media.tumblr.com/9951ca2e7e884a48ca5b5269f5514cd6/tumblr_nwjrkxWOcd1tslewgo1_500.gif); */
   background-repeat:no-repeat;
   background-size:cover;
 	background-position: center center;
+  background-attachment: fixed;
   filter:blur(2px);
 	z-index: -1;
 
@@ -56,19 +57,42 @@ main, footer, header {
 	opacity: 0.75;
 }
 
+
+
 header {
 	position: fixed;
 	right: 0;
 	top: 50%;
 	transform: translateY(-50%);
+
 }
 
-main {
-	/* max-width: 600px; */
-	margin: 0 auto;
+header a {
+  box-shadow: 0 0 10px #231F20;
+  height: 72px;
+  width: 30px;
+  display: block;
+
+}
+
+.hero {
+  position: relative;
 	text-align: center;
-	padding-left: calc(30px + 1em);
-	padding-right: calc(30px + 1em);
+  padding-bottom: 4em;
+}
+
+.hero .wrapper {
+    padding-left: calc(30px + 1em);
+  	padding-right: calc(30px + 1em);
+    max-width: 800px;
+  	margin: 0 auto;
+}
+
+.wrapper {
+  padding-left: 1em;
+  padding-right: calc(30px + 1em);
+  max-width: 800px;
+	margin: 0 auto;
 }
 
 img {
@@ -89,11 +113,78 @@ h1 img {
 	width: 200px;
 }
 
-main h2 {
+.faq {
+  padding: 2em 0;
+  background: linear-gradient(#FBAA19, #EF3F28);
+}
+
+.contact {
+  background: #EEEEEE;
+  padding: 3em 0 2em;
+  text-align: center;
+}
+
+.contact a.cta {
+  font-family: "Arbutus", monospace;
+  margin-bottom: 0;
+}
+
+.faq p, .contact p {
+  margin: 0 0 1em;
+  padding: 0;
+  color: #231F20;
+  font-family: 'Nunito Sans', sans-serif;
+}
+
+.faq ul {
+  margin-top: 0;
+  padding-top: 0;
+}
+
+.faq li {
+  font-family: 'Nunito Sans', sans-serif;
+  line-height: 1.5em;
+}
+
+
+.faq h3, .contact h3 {
+  text-transform: uppercase;
+  margin: 48px 0 8px;
+  padding: 0 0 0;
+  line-height: 1em;
+}
+
+
+
+.contact h3 {
+  margin-top: 0;
+}
+
+.faq a.cta {
+ display: inline-block;
+ padding: 0.5em 1em;
+ margin-bottom: 0;
+ margin-top: 0;
+ border: 2px solid #231F20;
+ /* background: #231F20; */
+ background: none;
+ color: #231F20;
+ text-decoration: none;
+ transition: all 0.2s ease-out;
+ font-family: "Arbutus", monospace;
+}
+
+.faq a.cta:hover {
+  background: #231F20;
+  color: #FFFFFF;
+}
+
+
+.hero h2 {
 	font-size: 2em;
 }
 
-h2, p {
+.hero h2, .hero p {
 	color: #FBAA19;
 	text-transform: uppercase;
 }
@@ -102,11 +193,11 @@ p {
 	line-height: 1.5em;
 }
 
-p span {
+.hero p span {
 	color: #EF3F28;
 }
 
-p br {
+.hero p br {
 	display: none;
 }
 
@@ -114,18 +205,24 @@ p br {
 	.mobile-hide {
 		display: none;
 	}
-	p br.mobile-only {
+	.hero p br.mobile-only {
 		display: block;
 	}
 }
 
-main a.cta {
+ a.cta {
 	display: inline-block;
 	padding: 0.5em 1em;
 	margin-bottom: 2em;
-	background: #FBAA19;
-	color: #EF3F28;
+  margin-top: 1em;
+	background: #EF3F28;
+	color: #231F20;
 	text-decoration: none;
+  transition: background 0.2s ease-out;
+}
+
+a.cta:hover {
+  background: #FBAA19;
 }
 
 img.matches {
@@ -133,27 +230,76 @@ img.matches {
 }
 
 footer {
+  background: #231F20;
 	padding: 32px 16px;
-	color: #444;
+	color: #666;
 	font-size: 0.8em;
 	text-align: center;
-	font-family: "Helvetica", "Arial", helvetica, arial, sans-serif;
+	font-family: 'Nunito Sans', sans-serif;
+}
+
+.social {
+  padding: 0 0 1em;
+  font-size: 16px;
+}
+
+.social a {
+  display: inline-block;
+  margin-right: 0.5em;
+  font-size: 24px;
+  color: #FBAA19;
+  text-decoration: none;
+}
+
+.social a:last-child {
+  margin-right: 0;
+}
+
+.social p {
+  text-align: center;
+  color: #EF3F28;
+  font-family: "Arbutus", monospace;
+  text-transform: uppercase;
+}
+
+.social p span {
+  color: #FBAA19;
+}
+
+/* .social a:nth-child(even) {
+  color: #EF3F28;
+} */
+
+
+.social a:hover {
+  color: #EF3F28;
 }
 
 @media screen and (min-width: 768px){
-	main h1 {
+	.hero h1 {
 		margin-top: 3em;
 	}
-	main h1 img {
+	.hero h1 img {
 		width: 300px;
 	}
-	main h2 {
+	.hero h2 {
 		font-size: 3em;
 	}
+  .hero-ctas a {
+    margin-right: 1em;
+  }
+  .hero-ctas a:last-child {
+    margin-right: 0;
+  }
 }
 
+@media screen and (min-width: 960px){
+	.wrapper {
+    padding-right: 1em;
+  }
+}
 @media screen and (min-width: 1600px){
-	main h1 img {
+	.hero h1 img {
 		width: 400px;
 	}
 }
