@@ -26,6 +26,7 @@ body {
 
 main, footer, header {
 	z-index: 1;
+  overflow: hidden;
 }
 
 .bg{
@@ -34,7 +35,7 @@ main, footer, header {
   left:0;
   width:100vw;
   height:100vh;
-  /* background-image:url(http://78.media.tumblr.com/9951ca2e7e884a48ca5b5269f5514cd6/tumblr_nwjrkxWOcd1tslewgo1_500.gif); */
+  background-image:url("../img/fire.gif");
   background-repeat:no-repeat;
   background-size:cover;
 	background-position: center center;
@@ -64,6 +65,7 @@ header {
 	right: 0;
 	top: 50%;
 	transform: translateY(-50%);
+  z-index: 10;
 
 }
 
@@ -114,13 +116,34 @@ h1 img {
 }
 
 .faq {
-  padding: 2em 0;
+  padding: 1em 0;
   background: linear-gradient(#FBAA19, #EF3F28);
+  position: relative;
+
+}
+
+.full-image {
+  top: calc(100vw * -0.073);
+  position: absolute;
+  display: block;
+  max-width: none;
+  width: 102%;
+  left: -1%;
+  margin: 0;
+  padding: 0;
+  z-index: 1;
+  /* height: 0;
+  padding-bottom: 8%; */
+}
+
+.full-image.bottom {
+  top: auto;
+  bottom: calc(100vw * -0.073);
 }
 
 .contact {
   background: #EEEEEE;
-  padding: 3em 0 2em;
+  padding: 4em 0 3em;
   text-align: center;
 }
 
@@ -296,6 +319,9 @@ footer {
 @media screen and (min-width: 960px){
 	.wrapper {
     padding-right: 1em;
+  }
+  .faq {
+    margin: 2em 0;
   }
 }
 @media screen and (min-width: 1600px){
