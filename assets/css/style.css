@@ -28,7 +28,7 @@ main {
 	left: 0;
 	width: 100vw;
 	height: 100vh;
-	background-image: url("../img/fire.gif");
+	/* background-image: url("../img/fire.gif"); */
 	background-repeat: no-repeat;
 	background-size: cover;
 	background-position: center center;
@@ -118,10 +118,17 @@ h1 img {
 	left: -1%;
 	margin: 0;
 	padding: 0;
-	z-index: 1;
+	z-index: 0;
 	/* height: 0;
   padding-bottom: 8%; */
 }
+
+@media screen and (min-width: 1700px) {
+	.full-image {
+		display: none;
+	}
+}
+
 
 .full-image.bottom {
 	top: auto;
@@ -137,6 +144,8 @@ h1 img {
 .contact a.cta {
 	font-family: hwt-american-inset, monospace;
 	margin-bottom: 0;
+  position: relative;
+  z-index: 99;
 }
 
 .faq p, .contact p {
@@ -184,6 +193,16 @@ h1 img {
 .faq a.cta:hover {
 	background: #231F20;
 	color: #FFFFFF;
+}
+
+.hero {
+  position: relative;
+  z-index: 0;
+}
+
+.faq {
+  position: relative;
+  z-index: 1;
 }
 
 .hero h2 {
