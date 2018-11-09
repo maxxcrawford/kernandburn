@@ -28,7 +28,7 @@ main {
 	left: 0;
 	width: 100vw;
 	height: 100vh;
-	background-image: url("../img/fire.gif");
+	/* background-image: url("../img/fire.gif"); */
 	background-repeat: no-repeat;
 	background-size: cover;
 	background-position: center center;
@@ -147,6 +147,11 @@ h1 img {
   position: relative;
   z-index: 99;
 }
+
+a.disabled {
+	cursor: not-allowed !important;
+}
+
 
 .faq p, .contact p {
 	margin: 0 0 1em;
@@ -330,4 +335,15 @@ footer {
 	.hero h1 img {
 		width: 400px;
 	}
+}
+
+.sold_out {
+	background: #EF3F28;
+	color: black;
+	text-transform: uppercase;
+	text-align: center;
+	padding: 1em;
+	z-index: 2;
+	position: relative;
+
 }
