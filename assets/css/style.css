@@ -125,7 +125,7 @@ h1 img {
 
 @media screen and (min-width: 1700px) {
 	.full-image {
-		display: none;
+		/* display: none; */
 	}
 }
 
