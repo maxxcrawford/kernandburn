@@ -260,12 +260,13 @@ img.matches {
 }
 
 footer {
-	background: #231F20;
+	background: none;
 	padding: 32px 16px;
 	color: #666;
 	font-size: 0.8em;
 	text-align: center;
 	font-family: 'Nunito Sans', sans-serif;
+	position: relative;
 }
 
 .social {
