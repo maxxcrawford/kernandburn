@@ -371,3 +371,8 @@ footer {
 .addtocalendar ul.atcb-list li.atcb-item a.atcb-item-link {
 	color: black;
 }
+
+#knb-countdown {
+	color: #FBAA19;
+	font-size: 24px;
+}
