@@ -137,15 +137,15 @@ h1 img {
 
 .contact {
 	background: #EEEEEE;
-	padding: 4em 0 3em;
+	padding: 4em 0 1em;
 	text-align: center;
 }
 
-.contact a.cta {
+.contact a.cta, span.cta a.atcb-link {
 	font-family: hwt-american-inset, monospace;
 	margin-bottom: 0;
-  position: relative;
-  z-index: 99;
+  	position: relative;
+  	z-index: 99;
 }
 
 a.disabled {
@@ -158,6 +158,10 @@ a.disabled {
 	padding: 0;
 	color: #231F20;
 	font-family: 'Nunito Sans', sans-serif;
+}
+
+.contact p {
+	margin: 0 0 2.5em;
 }
 
 .faq ul {
@@ -240,7 +244,7 @@ p {
 	}
 }
 
-a.cta {
+a.cta, span.cta a.atcb-link {
 	display: inline-block;
 	padding: 0.5em 1em;
 	margin-bottom: 2em;
@@ -251,7 +255,7 @@ a.cta {
 	transition: background 0.2s ease-out;
 }
 
-a.cta:hover {
+a.cta:hover, span.cta a.atcb-link:hover {
 	background: #FBAA19;
 }
 
@@ -346,5 +350,24 @@ footer {
 	padding: 1em;
 	z-index: 2;
 	position: relative;
+}
 
+.addtocalendar ul.atcb-list {
+	top: 57px;
+    right: 0px;
+    left: unset;
+    background: #FBAA19;
+}
+
+.addtocalendar ul.atcb-list li.atcb-item {
+	padding: 3px;
+    background: #FBAA19;
+}
+
+.addtocalendar ul.atcb-list li.atcb-item:hover {
+    background: #EF3F28;
+}
+
+.addtocalendar ul.atcb-list li.atcb-item a.atcb-item-link {
+	color: black;
 }
