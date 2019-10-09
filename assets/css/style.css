@@ -8,8 +8,8 @@ html {
 }
 
 body {
-	background: #231F20;
-	font-family: hwt-american-inset, monospace;
+	background: #e0e0e0;
+	font-family: 'Nunito Sans', hwt-american-inset, monospace;
 	font-size: 16px;
 }
 
@@ -68,7 +68,7 @@ header a {
 .hero {
 	position: relative;
 	text-align: center;
-	padding-bottom: 4em;
+    text-shadow: 0 8px 10px rgba(0,0,0,0.3);
 }
 
 .hero .wrapper {
@@ -83,6 +83,18 @@ header a {
 	padding-right: calc(30px + 1em);
 	max-width: 800px;
 	margin: 0 auto;
+}
+
+#knb-countdown {
+	color: black;
+	font-size: 24px;
+}
+
+#logo {
+    -webkit-filter: drop-shadow(0 15px 10px rgba(0,0,0,0.3));
+    filter: drop-shadow(0 15px 10px rgba(0,0,0,0.3));
+    -ms-filter: "progid:DXImageTransform.Microsoft.Dropshadow(OffX=12, OffY=12, Color='#444')";
+    filter: "progid:DXImageTransform.Microsoft.Dropshadow(OffX=12, OffY=12, Color='#444')";
 }
 
 img {
@@ -105,8 +117,9 @@ h1 img {
 
 .faq {
 	padding: 1em 0;
-	background: linear-gradient(#FBAA19, #EF3F28);
+	background: black;
 	position: relative;
+	color: white;
 }
 
 .full-image {
@@ -136,13 +149,12 @@ h1 img {
 }
 
 .contact {
-	background: #EEEEEE;
 	padding: 4em 0 1em;
 	text-align: center;
 }
 
 .contact a.cta, span.cta a.atcb-link {
-	font-family: hwt-american-inset, monospace;
+	font-family: 'Nunito Sans', hwt-american-inset, monospace;
 	margin-bottom: 0;
   	position: relative;
   	z-index: 99;
@@ -156,7 +168,7 @@ a.disabled {
 .faq p, .contact p {
 	margin: 0 0 1em;
 	padding: 0;
-	color: #231F20;
+	color: white;
 	font-family: 'Nunito Sans', sans-serif;
 }
 
@@ -175,10 +187,17 @@ a.disabled {
 }
 
 .faq h3, .contact h3 {
+	font-weight: 900;
+	color: #EF3F28;
 	text-transform: uppercase;
 	margin: 48px 0 8px;
 	padding: 0 0 0;
 	line-height: 1em;
+	font-size: 18px;
+	letter-spacing: 2px;
+}
+.faq h3 {
+	text-shadow: 0 0 4px;
 }
 
 .contact h3 {
@@ -196,7 +215,7 @@ a.disabled {
 	color: #231F20;
 	text-decoration: none;
 	transition: all 0.2s ease-out;
-	font-family: hwt-american-inset, monospace;
+	font-family: 'Nunito Sans', hwt-american-inset, monospace;
 }
 
 .faq a.cta:hover {
@@ -205,8 +224,14 @@ a.disabled {
 }
 
 .hero {
+  padding: 42vw 0 5vw 0;
   position: relative;
   z-index: 0;
+  background-image: url('/assets/img/KernBurn_BG_2.jpg');
+  background-size: 100% auto;
+  background-position: top;
+  background-repeat: no-repeat;
+  letter-spacing: 2px;
 }
 
 .faq {
@@ -219,7 +244,7 @@ a.disabled {
 }
 
 .hero h2, .hero p {
-	color: #FBAA19;
+	color: black;
 	text-transform: uppercase;
 }
 
@@ -236,6 +261,10 @@ p {
 }
 
 @media all and (max-width: 767px) {
+	.hero {
+		background-image: url('/assets/img/KernBurn_BG_2_Mobile.jpg');
+		padding: 55vw 0 5vw 0;
+	}
 	.mobile-hide {
 		display: none;
 	}
@@ -253,6 +282,7 @@ a.cta, span.cta a.atcb-link {
 	color: #231F20;
 	text-decoration: none;
 	transition: background 0.2s ease-out;
+	text-transform: uppercase;
 }
 
 a.cta:hover, span.cta a.atcb-link:hover {
@@ -276,13 +306,14 @@ footer {
 .social {
 	padding: 0 0 1em;
 	font-size: 16px;
+	color: black;
 }
 
 .social a {
 	display: inline-block;
 	margin-right: 0.5em;
 	font-size: 24px;
-	color: #FBAA19;
+	color: #EF3F28;
 	text-decoration: none;
 }
 
@@ -292,13 +323,12 @@ footer {
 
 .social p {
 	text-align: center;
-	color: #EF3F28;
-	font-family: hwt-american-inset, monospace;
+	font-family: 'Nunito Sans', hwt-american-inset, monospace;
 	text-transform: uppercase;
 }
 
 .social p span {
-	color: #FBAA19;
+	color: #EF3F28;
 }
 
 /* .social a:nth-child(even) {
@@ -325,20 +355,33 @@ footer {
 	.hero-ctas a:last-child {
 		margin-right: 0;
 	}
+	.faq h3, .contact h3 {
+		font-size: 22px;
+	}
 }
 
 @media screen and (min-width: 960px) {
 	.wrapper {
 		padding-right: 1em;
 	}
-	.faq {
-		margin: 2em 0;
+	.faq h3, .contact h3 {
+		font-size: 24px;
+	}
+	.hero {
+		padding: 38vw 0 5vw 0;
+		font-size: 24px;
+	}
+	#knb-countdown {
+		font-size: 28px;
 	}
 }
 
 @media screen and (min-width: 1600px) {
 	.hero h1 img {
 		width: 400px;
+	}
+	.faq h3, .contact h3 {
+		font-size: 26px;
 	}
 }
 
@@ -370,9 +413,4 @@ footer {
 
 .addtocalendar ul.atcb-list li.atcb-item a.atcb-item-link {
 	color: black;
-}
-
-#knb-countdown {
-	color: #FBAA19;
-	font-size: 24px;
 }
