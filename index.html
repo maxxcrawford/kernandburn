@@ -178,24 +178,27 @@
 				let secondsLeft = Math.floor((new Date("November 17, 2019 18:00:00")).getTime() / 1000) - Math.floor((new Date()).getTime() / 1000);
 				
 				setInterval(function() {
-					secondsLeft = secondsLeft > 1 ? secondsLeft - 1 : 0;
+					let sec = secondsLeft = secondsLeft > 1 ? secondsLeft - 1 : 0;
 
-					let day = Math.floor(secondsLeft / (60 * 60 * 24));
+					let day = Math.floor(sec / (60 * 60 * 24));
+					sec = sec % (24 * 60 * 60);
 					let dayString = day.toString().split('');
 					clock.days.ones.innerText = dayString.pop();
 					clock.days.tens.innerText = dayString.pop();
 
-					let hour = (Math.floor((secondsLeft % 24 ) / (60 * 60)));
+					let hour = (Math.floor( sec / (60 * 60)));
+					sec = sec % (60 * 60);
 					let hourString = hour.toString().split('');
 					clock.hours.ones.innerText = hourString.pop();
 					clock.hours.tens.innerText = hourString.pop() || '0';
 
-					let minute = (Math.floor((secondsLeft % (60 * 24)) / (60)));
+					let minute = (Math.floor( sec / 60));
+					sec = sec % 60;
 					let minuteString = minute.toString().split('');
 					clock.minutes.ones.innerText = minuteString.pop();
 					clock.minutes.tens.innerText = minuteString.pop() || '0';
 
-					let second = (Math.floor((secondsLeft) % (60)));
+					let second = sec;
 					let secondString = second.toString().split('');
 					clock.seconds.ones.innerText = secondString.pop();
 					clock.seconds.tens.innerText = secondString.pop() || '0';
