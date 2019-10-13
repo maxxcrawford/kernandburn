@@ -294,17 +294,21 @@ img.matches {
 }
 
 footer {
-	background: none;
 	padding: 32px 16px;
 	color: #666;
 	font-size: 0.8em;
 	text-align: center;
 	font-family: 'Nunito Sans', sans-serif;
 	position: relative;
+
+    background: url('/assets/img/praisebe.jpg');
+    background-position: top center;
+    background-size: contain;
+    background-repeat: no-repeat;
+    padding: 150px 16px 32px;
 }
 
 .social {
-	padding: 0 0 1em;
 	font-size: 16px;
 	color: black;
 }
@@ -413,4 +417,56 @@ footer {
 
 .addtocalendar ul.atcb-list li.atcb-item a.atcb-item-link {
 	color: black;
+}
+
+#knb-logo {
+	position: absolute;
+	width: 80px;
+	height: 80px;
+	background: url('/assets/img/logo-transparent-white.png');
+	background-repeat: no-repeat;
+	background-size: contain;
+	background-position: center;
+    top: calc(35vw + 23%);
+	left: 20px;
+	z-index: 100;
+	mix-blend-mode: difference;
+}
+
+@media screen and (min-width: 520px) {
+	#knb-logo {
+		top: 70vw;
+		width: 100px;
+		height: 100px;
+	}
+}
+
+@media screen and (min-width: 768px) {
+	#knb-logo {
+		position: fixed;
+		top: 20px;
+	}
+}
+
+@media screen and (min-width: 960px) {
+	#knb-logo {
+		width: 110px;
+		height: 110px;
+	}
+}
+
+@media screen and (min-width: 1185px) {
+	#knb-logo {
+		width: 120px;
+		height: 120px;
+	}
+}
+
+@media screen and (min-width: 1600px) {
+	#knb-logo {
+		width: 130px;
+		height: 130px;
+		top: 30px;
+		left: 30px;
+	}
 }
