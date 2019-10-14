@@ -150,7 +150,7 @@ h1 img {
 }
 
 .contact {
-	padding: 4em 0 1em;
+	padding: 2em 0 1em;
 	text-align: center;
 }
 
@@ -418,6 +418,20 @@ footer {
 
 .addtocalendar ul.atcb-list li.atcb-item a.atcb-item-link {
 	color: black;
+}
+
+#sponsors {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-flow: row wrap;
+	width: 100%;
+	padding: 0 30px;
+	background: #e0e0e0;
+}
+
+#sponsors img {
+	mix-blend-mode: darken;
 }
 
 #knb-logo {
