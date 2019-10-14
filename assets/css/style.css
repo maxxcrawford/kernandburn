@@ -448,6 +448,12 @@ footer {
 	mix-blend-mode: difference;
 }
 
+@supports not (mix-blend-mode: difference) {
+	#knb-logo {
+		filter: drop-shadow(0 0 6px black);
+	}
+}
+
 @media screen and (min-width: 520px) {
 	#knb-logo {
 		top: 70vw;
