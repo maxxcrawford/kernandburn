@@ -20,6 +20,7 @@ main, footer, header {
 
 main {
   overflow: hidden;
+  position: relative;
 }
 
 .bg {
@@ -390,12 +391,12 @@ footer {
 }
 
 .sold_out {
-	background: #EF3F28;
-	color: black;
+	background: black;
+	color: white;
+	text-shadow: 0 0 4px;
 	text-transform: uppercase;
 	text-align: center;
 	padding: 1em;
-	z-index: 2;
 	position: relative;
 }
 
@@ -427,7 +428,7 @@ footer {
 	background-repeat: no-repeat;
 	background-size: contain;
 	background-position: center;
-    top: calc(35vw + 23%);
+    top: calc(55vw + 6%);
 	left: 20px;
 	z-index: 100;
 	mix-blend-mode: difference;
@@ -445,6 +446,10 @@ footer {
 	#knb-logo {
 		position: fixed;
 		top: 20px;
+	}
+
+	#knb-logo.with-sold-out {
+		top: 70px;
 	}
 }
 
@@ -468,5 +473,8 @@ footer {
 		height: 130px;
 		top: 30px;
 		left: 30px;
+	}
+	#knb-logo.with-sold-out {
+		top: 80px;
 	}
 }
