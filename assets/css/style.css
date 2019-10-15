@@ -425,9 +425,23 @@ footer {
 	justify-content: center;
 	align-items: center;
 	flex-flow: row wrap;
+	max-width: 800px;
+	margin: 0 auto;
 	width: 100%;
-	padding: 0 30px;
+	padding: 15px 30px;
 	background: #e0e0e0;
+}
+
+#sponsors a {
+	display: block;
+	padding: 16px 24px;
+	width: 100%;
+}
+
+#sponsors a img {
+	display: block;
+	max-width: 100%;
+	margin: 0 auto;
 }
 
 #sponsors img {
@@ -442,7 +456,7 @@ footer {
 	background-repeat: no-repeat;
 	background-size: contain;
 	background-position: center;
-    top: calc(55vw + 6%);
+  top: calc(55vw + 6%);
 	left: 20px;
 	z-index: 100;
 	mix-blend-mode: difference;
@@ -454,6 +468,12 @@ footer {
 	}
 }
 
+@media all and (min-width: 400px) {
+	#sponsors a {
+		width: 50%;
+	}
+}
+
 @media screen and (min-width: 520px) {
 	#knb-logo {
 		top: 70vw;
@@ -461,6 +481,16 @@ footer {
 		height: 100px;
 	}
 }
+
+@media all and (min-width: 600px) {
+	#sponsors {
+		padding-top: 30px;
+	}
+	#sponsors a {
+		width: auto;
+	}
+}
+
 
 @media screen and (min-width: 768px) {
 	#knb-logo {
@@ -484,6 +514,9 @@ footer {
 	#knb-logo {
 		width: 120px;
 		height: 120px;
+	}
+	#sponsors {
+		max-width: 100%;
 	}
 }
 
