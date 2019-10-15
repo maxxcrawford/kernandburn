@@ -21,6 +21,7 @@ main, footer, header {
 main {
   overflow: hidden;
   position: relative;
+  background: #e0e0e0;
 }
 
 .bg {
