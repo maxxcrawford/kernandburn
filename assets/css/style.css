@@ -280,14 +280,15 @@ a.cta, span.cta a.atcb-link {
 	margin-bottom: 2em;
 	margin-top: 1em;
 	background: #EF3F28;
-	color: #231F20;
+	color: white;
 	text-decoration: none;
 	transition: background 0.2s ease-out;
 	text-transform: uppercase;
+	text-shadow: none;
 }
 
 a.cta:hover, span.cta a.atcb-link:hover {
-	background: #FBAA19;
+	text-shadow: 0 0 4px;
 }
 
 img.matches {
@@ -411,20 +412,20 @@ footer {
 	top: 57px;
 	right: 0px;
 	left: unset;
-	background: #FBAA19;
+	background: #EF3F28;
 }
 
 .addtocalendar ul.atcb-list li.atcb-item {
 	padding: 3px;
-	background: #FBAA19;
-}
-
-.addtocalendar ul.atcb-list li.atcb-item:hover {
 	background: #EF3F28;
 }
 
+.addtocalendar ul.atcb-list li.atcb-item:hover {
+	text-shadow: 0 0 4px;
+}
+
 .addtocalendar ul.atcb-list li.atcb-item a.atcb-item-link {
-	color: black;
+	color: white;
 }
 
 #sponsors {
