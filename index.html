@@ -208,7 +208,7 @@
 					sec = sec % (24 * 60 * 60);
 					let dayString = day.toString().split('');
 					clock.days.ones.innerText = dayString.pop();
-					clock.days.tens.innerText = dayString.pop();
+					clock.days.tens.innerText = dayString.pop() || '0';
 
 					let hour = (Math.floor( sec / (60 * 60)));
 					sec = sec % (60 * 60);
