@@ -48,7 +48,7 @@
 					</h1>
 					<p>November 17 <span class="mobile-hide">|</span> <br class="mobile-only"> Fassler Hall <span>|</span> 6pm</p>
 					<!-- <p>Registration Begins Soon</p> -->
-					<div id="knb-countdown">
+					<!-- <div id="knb-countdown">
 						<span class="days"><span class="tens">0</span><span class="ones">0</span></span>
 						<span class="colon">:</span>
 						<span class="hours"><span class="tens">0</span><span class="ones">0</span></span>
@@ -56,12 +56,12 @@
 						<span class="minutes"><span class="tens">0</span><span class="ones">0</span></span>
 						<span class="colon">:</span>
 						<span class="seconds"><span class="tens">0</span><span class="ones">0</span></span>
-					</div>
-					<p>+21 Only</p>
-					<!-- <div class="hero-ctas">
-						<a class="cta" href="https://www.eventbrite.com/e/kern-burn-y2-tickets-76575478317" target="_blank">REGISTER NOW</a>
-						<br>&nbsp;
 					</div> -->
+					<p>+21 Only</p>
+					<div class="hero-ctas">
+						<a class="cta" href="https://adctulsa.com/kern-and-burn/" target="_blank">SEE THE RESULTS</a>
+						<br>&nbsp;
+					</div>
 				</div>
 			</div>
 			<div id="faq" class="faq">
@@ -191,43 +191,43 @@
                 var h = d[g]('body')[0];h.appendChild(s); }})();
     	</script>
 		<script>
-			(function () {
-				let countdown = document.getElementById('knb-countdown');
-				let clock = {
-					days: {tens: countdown.querySelector("span.days span.tens"), ones: countdown.querySelector("span.days span.ones")},
-					hours: {tens: countdown.querySelector("span.hours span.tens"), ones: countdown.querySelector("span.hours span.ones")},
-					minutes: {tens: countdown.querySelector("span.minutes span.tens"), ones: countdown.querySelector("span.minutes span.ones")},
-					seconds: {tens: countdown.querySelector("span.seconds span.tens"), ones: countdown.querySelector("span.seconds span.ones")}
-				};
-				let secondsLeft = Math.floor((new Date("November 17, 2019 18:00:00")).getTime() / 1000) - Math.floor((new Date()).getTime() / 1000);
+			// (function () {
+			// 	let countdown = document.getElementById('knb-countdown');
+			// 	let clock = {
+			// 		days: {tens: countdown.querySelector("span.days span.tens"), ones: countdown.querySelector("span.days span.ones")},
+			// 		hours: {tens: countdown.querySelector("span.hours span.tens"), ones: countdown.querySelector("span.hours span.ones")},
+			// 		minutes: {tens: countdown.querySelector("span.minutes span.tens"), ones: countdown.querySelector("span.minutes span.ones")},
+			// 		seconds: {tens: countdown.querySelector("span.seconds span.tens"), ones: countdown.querySelector("span.seconds span.ones")}
+			// 	};
+			// 	let secondsLeft = Math.floor((new Date("November 17, 2019 18:00:00")).getTime() / 1000) - Math.floor((new Date()).getTime() / 1000);
 
-				setInterval(function() {
-					let sec = secondsLeft = secondsLeft > 1 ? secondsLeft - 1 : 0;
+			// 	setInterval(function() {
+			// 		let sec = secondsLeft = secondsLeft > 1 ? secondsLeft - 1 : 0;
 
-					let day = Math.floor(sec / (60 * 60 * 24));
-					sec = sec % (24 * 60 * 60);
-					let dayString = day.toString().split('');
-					clock.days.ones.innerText = dayString.pop();
-					clock.days.tens.innerText = dayString.pop() || '0';
+			// 		let day = Math.floor(sec / (60 * 60 * 24));
+			// 		sec = sec % (24 * 60 * 60);
+			// 		let dayString = day.toString().split('');
+			// 		clock.days.ones.innerText = dayString.pop();
+			// 		clock.days.tens.innerText = dayString.pop() || '0';
 
-					let hour = (Math.floor( sec / (60 * 60)));
-					sec = sec % (60 * 60);
-					let hourString = hour.toString().split('');
-					clock.hours.ones.innerText = hourString.pop();
-					clock.hours.tens.innerText = hourString.pop() || '0';
+			// 		let hour = (Math.floor( sec / (60 * 60)));
+			// 		sec = sec % (60 * 60);
+			// 		let hourString = hour.toString().split('');
+			// 		clock.hours.ones.innerText = hourString.pop();
+			// 		clock.hours.tens.innerText = hourString.pop() || '0';
 
-					let minute = (Math.floor( sec / 60));
-					sec = sec % 60;
-					let minuteString = minute.toString().split('');
-					clock.minutes.ones.innerText = minuteString.pop();
-					clock.minutes.tens.innerText = minuteString.pop() || '0';
+			// 		let minute = (Math.floor( sec / 60));
+			// 		sec = sec % 60;
+			// 		let minuteString = minute.toString().split('');
+			// 		clock.minutes.ones.innerText = minuteString.pop();
+			// 		clock.minutes.tens.innerText = minuteString.pop() || '0';
 
-					let second = sec;
-					let secondString = second.toString().split('');
-					clock.seconds.ones.innerText = secondString.pop();
-					clock.seconds.tens.innerText = secondString.pop() || '0';
-				}, 1000);
-			})();
+			// 		let second = sec;
+			// 		let secondString = second.toString().split('');
+			// 		clock.seconds.ones.innerText = secondString.pop();
+			// 		clock.seconds.tens.innerText = secondString.pop() || '0';
+			// 	}, 1000);
+			// })();
 		</script>
 
 	</body>
